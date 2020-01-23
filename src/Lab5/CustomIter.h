@@ -40,6 +40,6 @@ public:
         return *this;
     }
 
-    ~CustomIter();
+    ~CustomIter() = default;
 
 };
