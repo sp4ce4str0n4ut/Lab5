@@ -3,7 +3,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iterator>
-#include <myvector>
+#include <vector>
 
 using namespace std;
 
@@ -11,7 +11,7 @@ int main() {
 	
     int ind = 2;
 	
-	myvector<int> myvec;
+	vector<int> myvec;
     CustomIter<int> iterator(cout, " ", ind);
 	
     
