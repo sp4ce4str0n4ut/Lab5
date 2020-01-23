@@ -35,7 +35,6 @@ int main() {
     }
 
 
-	output = new int[10];
     mergesort(myvec.begin(), myvec.end());
     cout << endl << "myvector after sorting:" << endl;
     for(int x: myvec)

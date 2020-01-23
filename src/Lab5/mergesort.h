@@ -1,31 +1,33 @@
 #include <iostream>
 
 template<typename T>
-void mergesort(T first, T last) {
-    int size = last - first;
+void mergesort(T f, T l) {
+	
+    int size = l - f;
     if (size == 0 || size == 1)
         return;
 
-    T center = first + (size / 2);
+    T center = f + (size / 2);
 
-    merge_sort(first, center);
-    merge_sort(center, last);
+    mergesort(f, center);
+	
+    mergesort(center, l);
 
 
-    T n1 = first;
+    T n1 = f;
     T n2 = center;
 
     auto list = new typename std::iterator_traits<T>::value_type[size];
 
     size = 0;
-    while(n1 != center || n2 != last)
+    while(n1 != center || n2 != l)
         if(n1 == center)
-            while(n2 != last) {
+            while(n2 != l) {
                 list[size] = *n2;
                 n2++;
                 size++;
             }
-        else if(n2 == last)
+        else if(n2 == l)
             while(n1 != center) {
                 list[size] = *n1;
                 n1++;
@@ -43,10 +45,10 @@ void mergesort(T first, T last) {
         }
 
     size = 0;
-    while(first != last){
-        *first = list[size];
+    while(f != l){
+        *f = list[size];
         size++;
-        first++;
+        f++;
     }
     delete[] list;
 }
