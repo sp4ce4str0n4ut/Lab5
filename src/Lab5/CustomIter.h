@@ -1,11 +1,11 @@
-#include <ostreameam>
+#include <ostream>
 
 
 
 template<class T>
 class CustomIter {
 private:
-	std::ostreameam* pointer;
+	std::ostream* pointer;
 	
 	int N;
     int n;
@@ -14,7 +14,7 @@ private:
     
 	
 public:
-    CustomIter(std::ostreameam& stream, const char* del, int N): pointer(&stream), del(del), N(N) {
+    CustomIter(std::ostream& stream, const char* del, int N): pointer(&stream), del(del), N(N) {
         n = 1;
     }
 

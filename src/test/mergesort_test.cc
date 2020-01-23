@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
-#include <myproject/mergesort.h>
-#include <myproject/CustomIter.h>
+#include <Lab5/mergesort.h>
+#include <Lab5/CustomIter.h>
 #include <vector>
 
 
